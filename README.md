@@ -2,7 +2,7 @@
 Welcome to my project.
 It has been built with AngularJS and Firebase. It's built on gulp-patterns demo (by John Papa).
 
-Below instructions came from gulp-patters demo.
+Below instructions came from gulp-patterns demo.
 
 ## Requirements
 
