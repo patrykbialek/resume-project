@@ -2,21 +2,20 @@
 <html ng-app="app">
 
 <head>
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/>
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
     <title ng-bind="title"></title>
     <base href="/">
     <style>
         /* This helps the ng-show/ng-hide animations start at the right place. */
         /* Since Angular has this but needs to load, this gives us the class early. */
-
+        
         .ng-hide {
             display: none !important;
         }
     </style>
-    <link rel="shortcut icon" href="images/favicon.ico"/>
+    <link rel="shortcut icon" href="images/favicon.ico" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- build:css styles/lib.css -->
     <!-- bower:css -->
@@ -34,12 +33,11 @@
 <body layout="row" data-ng-controller="Main as main">
 
     <div class="splash" data-ng-if="main.isBusy">
-        <img src="images/svg-loaders/grid.svg" width="50"/>
+        <img src="images/svg-loaders/grid.svg" width="50" />
     </div>
 
-    <md-sidenav class="md-primary site-sidenav md-sidenav-left md-whiteframe-z2" md-component-id="left"
-                md-is-locked-open="$mdMedia('gt-sm')"
-                data-ng-if="!isIntro && main.isAuth">
+    <md-sidenav class="md-primary site-sidenav md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')"
+    data-ng-if="!isIntro && main.isAuth">
         <header class="nav-header">
             <a ng-href="/profile" class="docs-logo" href="/">
                 <img src="images/profile.png" alt="">
@@ -57,11 +55,16 @@
         <div data-ng-include="'app/layout/middlenav.html'"></div>
 
         <footer data-ng-if="!isIntro" data-ng-cloak style="opacity:0.6;">
-            <md-button md-offset="0 -7" aria-label="Open menu" class="md-icon-button"
-                       ng-click="main.showBottomSheet($event)">
+            <md-button md-offset="0 -7" aria-label="Open menu" class="md-icon-button" ng-click="main.showBottomSheet($event)">
                 <md-icon class="material-icons">announcement</md-icon>
             </md-button>
         </footer>
+
+        <md-button class="md-icon-button githubsource" data-ng-if="!main.isBusy" hide-sm aria-label="Source on Github" 
+            href="https://github.com/patrykbialek/resume-project" target="_blank">
+            <md-tooltip hide-sm>Source on Github</md-tooltip>
+            <img src="images/GitHub-Mark-Light-120px-plus.png" style="width:65%;" alt="github">
+        </md-button>
     </div>
 
     <!-- build:js js/lib.js -->
