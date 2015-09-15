@@ -12,14 +12,14 @@
     }
     /* jshint -W101 */
     var config = {
-        appErrorPrefix: '[PBResume Error] ', //Configure the exceptionHandler decorator
-        appTitle: 'Patryk Bialek Resume',
+        appErrorPrefix: '[RP Error] ', //Configure the exceptionHandler decorator
+        appTitle: 'Resume Project',
         imageBasePath: '/images/photos/',
         unknownPersonImageSource: 'unknown_person.jpg',
         updated: '04/09/2015',
         contactUrl: 'https://formspree.io/patryk.b@me.com',
-        userName: 'resume@patrykbe.pl',
-        dbUrl: 'https://patrykbe.firebaseio.com',
+        userName: 'resume-project@patrykbe.pl',
+        dbUrl: 'https://resume-project.firebaseio.com', // password: resume
         startState: 'profile',
         //jscs:disable maximumLineLength
         themeColors: ['red', 'pink', 'purple', 'deep-purple', 'indigo', 'blue', 'light-blue', 'cyan', 'teal', 'green',
@@ -60,7 +60,7 @@
             };
 
             routerHelperProvider.configure({
-                docTitle: 'Patryk Bialek ',
+                docTitle: 'Resume Project ',
                 //resolveAlways: resolveAlways
             });
         }
