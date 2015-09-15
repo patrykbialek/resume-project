@@ -13,13 +13,13 @@
     /* jshint -W101 */
     var config = {
         appErrorPrefix: '[RP Error] ', //Configure the exceptionHandler decorator
-        appTitle: 'Resume Project',
+        appTitle: 'Patryk Białek Resume', //appTitle: 'Resume Project',
         imageBasePath: '/images/photos/',
         unknownPersonImageSource: 'unknown_person.jpg',
-        updated: '04/09/2015',
+        updated: '14/09/2015',
         contactUrl: 'https://formspree.io/patryk.b@me.com',
-        userName: 'resume-project@patrykbe.pl',
-        dbUrl: 'https://resume-project.firebaseio.com', // password: resume
+        userName: 'patryk.b@me.com', //resume-project@patrykbe.pl',
+        dbUrl: 'https://patrykbe.firebaseio.com', //'https://resume-project.firebaseio.com', // password: resume
         startState: 'profile',
         //jscs:disable maximumLineLength
         themeColors: ['red', 'pink', 'purple', 'deep-purple', 'indigo', 'blue', 'light-blue', 'cyan', 'teal', 'green',

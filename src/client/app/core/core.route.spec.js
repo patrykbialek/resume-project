@@ -23,7 +23,7 @@ describe('core', function () {
         });
 
         it('should route /invalid to the otherwise (404) route', function () {
-            $location.path('/invalid');
+            $location.path('/#/invalid');
             $rootScope.$apply();
             expect($state.current.templateUrl).to.equal(views.four0four);
         });

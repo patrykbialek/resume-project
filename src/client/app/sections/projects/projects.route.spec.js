@@ -19,7 +19,7 @@ describe('Projects', function () {
         });
 
         it('should map state intro to url /projets ', function () {
-            expect($state.href('projects.detail', {})).to.equal('/projects/');
+            expect($state.href('projects.detail', {})).to.equal('#/projects/');
         });
 
         it('should map /list route to intro View template', function () {
@@ -27,7 +27,7 @@ describe('Projects', function () {
         });
 
         it('should map state intro to url /projects/list ', function () {
-            expect($state.href('projects.list', {})).to.equal('/projects/list');
+            expect($state.href('projects.list', {})).to.equal('#/projects/list');
         });
     });
 });

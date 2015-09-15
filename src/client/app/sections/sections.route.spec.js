@@ -21,7 +21,7 @@ describe('Sections route', function () {
         });
 
         it('should map state intro to url /faq ', function () {
-            expect($state.href('faq', {})).to.equal('/faq');
+            expect($state.href('faq', {})).to.equal('#/faq');
         });
 
         it('should map /other route to intro View template', function () {
@@ -29,7 +29,7 @@ describe('Sections route', function () {
         });
 
         it('should map state intro to url /other ', function () {
-            expect($state.href('other', {})).to.equal('/other');
+            expect($state.href('other', {})).to.equal('#/other');
         });
 
         it('should map /profile route to intro View template', function () {
@@ -37,7 +37,7 @@ describe('Sections route', function () {
         });
 
         it('should map state intro to url /profile ', function () {
-            expect($state.href('profile', {})).to.equal('/profile');
+            expect($state.href('profile', {})).to.equal('#/profile');
         });
     });
 });
