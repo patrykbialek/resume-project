@@ -7,11 +7,9 @@
     <md-divider></md-divider>
 
     <section class="container" layout="row" layout-margin layout-wrap layout-align="center center" >
-
             <span class="spinner" data-ng-show="experience.isBusy" layout-padding layout="row" layout-align="center center">
                 <md-progress-circular md-mode="indeterminate"></md-progress-circular>
             </span>
-
             <md-card flex-gt-lg="45" flex="45" flex-md="100" flex-sm="100"
                      data-ng-show="!experience.isBusy"
                      ng-repeat="item in experience.experiences">

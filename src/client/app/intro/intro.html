@@ -12,13 +12,13 @@
             <img src="images/profile.png" alt="">
         </div>
 
-        <div class="intro-div" flex-gt-lg="30" flex-md="45" flex-gt-sm="40" flex-sm="100" class="text-justify" layout-padding data-ng-cloak
+        <div class="intro-div text-justify" flex-gt-lg="30" flex-md="45" flex-gt-sm="40" flex-sm="100" layout-padding data-ng-cloak
         data-ng-show="intro.intro && !intro.isBusy" data-ng-bind-html="intro.intro">
         </div>
     </section>
 
-    <section layout="row" layout-align-sm="center center" layout-sm="row" layout-wrap>
-        <div class="spinner" layout-padding layout="row" layout-align="center center" layout-wrap data-ng-show="intro.isBusy">
+    <section layout="row" layout-align-sm="center center" layout-sm="row" layout-wrap layout-padding>
+        <div class="spinner" layout="row" layout-align="center center" layout-wrap data-ng-show="intro.isBusy">
             <md-progress-circular class="md-hue-1" md-mode="indeterminate"></md-progress-circular>
         </div>
     </section>

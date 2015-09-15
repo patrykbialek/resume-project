@@ -5,18 +5,15 @@
         <i class="quotation-author md-caption"> ~ Mary Schmich</i>
     </div>
 
-    <section class="container md-whiteframe-z1">
-
-        <md-toolbar class="md-primary md-default-theme">
-            <div class="md-toolbar-tools">
-                <h2 class="md-flex">Page not found</h2>
-            </div>
-        </md-toolbar>
-        <md-content class="md-padding">
-            <p class="white-space-pre-line ">
+    <section class="container">
+        <div class="md-padding" data-ng-show="!profile.isBusy">
+            <h2 class="md-flex">Page not found</h2>
+            <p class="white-space-pre-line text-justify">
                 The page you are looking for is gone or does not exist.
             </p>
-        </md-content>
-
+        </div>
+        <span class="spinner" data-ng-show="profile.isBusy" layout-padding layout="row" layout-align="center center">
+            <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+        </span>
     </section>
 </div>

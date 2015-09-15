@@ -15,7 +15,8 @@
             resolveAlways: {}
         };
 
-        $locationProvider.html5Mode(true);
+        //It is off since github pages do not support is
+        //$locationProvider.html5Mode(true);
 
         this.configure = function(cfg) {
             angular.extend(config, cfg);
