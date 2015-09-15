@@ -9,7 +9,7 @@
   "homepage": "none",
   "repository": {
     "type": "git",
-    "url": "https://github.com/patrykbialek/resume-project.github.io"
+    "url": "https://github.com/patrykbialek/resume-project"
   },
   "scripts": {
     "init": "npm install",
