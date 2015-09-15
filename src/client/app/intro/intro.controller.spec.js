@@ -43,7 +43,7 @@ describe('Intro', function () {
             });
         });
 
-        describe.skip('after ContactMe button pressed', function () {
+        describe('after ContactMe button pressed', function () {
             it('should have contact dialog open', function () {
                 controller.gotoContactForm();
 
@@ -51,7 +51,7 @@ describe('Intro', function () {
             });
         });
 
-        describe.skip('after Enter button pressed', function () {
+        describe('after Enter button pressed', function () {
             it('should have enter dialog open', function () {
                 controller.gotoEnterForm();
 

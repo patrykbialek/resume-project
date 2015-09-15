@@ -25,7 +25,7 @@ describe('Projects project.list', function () {
 
     bard.verifyNoOutstandingHttpRequests();
 
-    describe.skip('ProjectList controller', function () {
+    describe('ProjectList controller', function () {
         it('should be created successfully', function () {
             expect(controller).to.be.defined;
         });

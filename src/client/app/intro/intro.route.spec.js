@@ -17,7 +17,7 @@ describe('Intro', function () {
         });
 
         it('should map state intro to url / ', function () {
-            expect($state.href('intro', {})).to.equal('#/');
+            expect($state.href('intro', {})).to.equal('/');
         });
 
         it('of intro should work with $state.go', function () {

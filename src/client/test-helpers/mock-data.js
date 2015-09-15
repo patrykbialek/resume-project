@@ -111,7 +111,7 @@ var mockData = (function () {
               "desc" : "I am interested in work in the Information Systems area. I am interested in work in the Information Systems area. I am interested in work in the Information Systems area. <br><br>I am interested in work in the Information Systems area. I am interested in work in the Information Systems area. I am interested in work in the Information Systems area. "
             },
             "projects" : {
-              "project one" : {
+              "project1" : {
                 "client" : "Company - IT dept.",
                 "desc" : "Tool supporting test process. Allows user to create tasks list per system version, application or business unit.",
                 "image" : "",
@@ -126,7 +126,7 @@ var mockData = (function () {
                 "technology" : ".Net, MS SQL, HTML, CSS, JavaScript",
                 "type" : "application"
               },
-              "project two" : {
+              "project2" : {
                 "client" : "Company - IT dept.",
                 "desc" : "Tool supporting test process. Allows user to create tasks list per system version, application or business unit.",
                 "image" : "",
