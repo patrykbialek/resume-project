@@ -18,8 +18,8 @@
         unknownPersonImageSource: 'unknown_person.jpg',
         updated: '14/09/2015',
         contactUrl: 'https://formspree.io/patryk.b@me.com',
-        userName: 'patryk.b@me.com', //resume-project@patrykbe.pl',
-        dbUrl: 'https://patrykbe.firebaseio.com', //'https://resume-project.firebaseio.com', // password: resume
+        userName: 'resume-project@patrykbe.pl',
+        dbUrl: 'https://resume-project.firebaseio.com', // password: resume
         startState: 'profile',
         //jscs:disable maximumLineLength
         themeColors: ['red', 'pink', 'purple', 'deep-purple', 'indigo', 'blue', 'light-blue', 'cyan', 'teal', 'green',
