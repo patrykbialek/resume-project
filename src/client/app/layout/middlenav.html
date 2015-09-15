@@ -1,0 +1,18 @@
+<div data-ng-controller="MiddleNav as vm">
+    <div class="navigate navigate_before" hide-sm data-ng-if="!isIntro && vm.previousState.state">
+        <md-button class="md-fab md-raised" data-ng-mouseenter="vm.isMouseEnterOnPrevious = true"
+                   data-ng-mouseleave="vm.isMouseEnterOnPrevious = false"
+                   data-ng-click="vm.gotoPrevious()" aria-label="Previous section">
+            <md-icon class="material-icons">arrow_back</md-icon>
+            <!--<span data-ng-if="main.isMouseEnterOnPrevious">{{main.previousState.label | uppercase}}</span>-->
+        </md-button>
+    </div>
+    <div class="navigate navigate_next" hide-sm data-ng-if="!isIntro && vm.nextState.state">
+        <md-button class="md-fab md-raised" data-ng-mouseenter="vm.isMouseEnterOnNext = true"
+                   data-ng-mouseleave="vm.isMouseEnterOnNext = false"
+                   data-ng-click="vm.gotoNext()" aria-label="Next section">
+            <!--<span data-ng-if="main.isMouseEnterOnNext">{{main.nextState.label | uppercase}}</span>-->
+            <md-icon class="material-icons">arrow_forward</md-icon>
+        </md-button>
+    </div>
+</div>

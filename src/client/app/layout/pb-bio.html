@@ -1,0 +1,13 @@
+<md-content flex="" role="navigation">
+    <ul class="bio-list">
+        <li data-ng-repeat="item in bio.bio">
+            <div flex="" layout="row" class="md-body-2">
+                <i class="material-icons bio-icon ">{{item.icon}}</i>
+                <span data-ng-if="!item.email">{{item.name}}
+                </span>
+                <a href="mailto:{{item.name}}" data-ng-if="item.email">{{item.name}}</a>
+                <!--<md-tooltip md-direction="top">{{item.label}}</md-tooltip>-->
+            </div>
+        </li>
+    </ul>
+</md-content>

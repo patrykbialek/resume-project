@@ -1,0 +1,13 @@
+<md-bottom-sheet data-ng-controller="Footer as footer">
+    <div layout="row">
+        <div flex="80" flex-sm="100">
+            <p class="md-caption" style="text-align: center;">{{footer.agreements.en}}</p>
+            <md-divider></md-divider>
+            <p class="md-caption" style="text-align: center;">{{footer.agreements.pl}}</p>
+        </div>
+        <div flex="20" hide-sm layout="column" layout-align="center end">
+            <p class="md-caption" style="text-align: right;">Updated on {{footer.updated}}</p>
+            <p class="md-caption" style="text-align: right;">2015 {{footer.author}}</p>
+        </div>
+    </div>
+</md-bottom-sheet>

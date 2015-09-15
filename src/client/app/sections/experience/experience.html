@@ -1,0 +1,29 @@
+<div class="layout-content">
+
+    <div class="layout-quotation text-center">
+        <h3 class="quotation-text md-headline">“Try not to become a man of success, but rather try to become a man of value.”</h3>
+        <i class="quotation-author md-caption"> ~ Albert Einstein</i>
+    </div>
+    <md-divider></md-divider>
+
+    <section class="container" layout="row" layout-margin layout-wrap layout-align="center center" >
+
+            <span class="spinner" data-ng-show="experience.isBusy" layout-padding layout="row" layout-align="center center">
+                <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+            </span>
+
+            <md-card flex-gt-lg="45" flex="45" flex-md="100" flex-sm="100"
+                     data-ng-show="!experience.isBusy"
+                     ng-repeat="item in experience.experiences">
+                <md-card-content>
+                    <h3 class="md-headline">{{item.position}}</h3>
+                    <h5 class="md-subhead">{{item.company}}</h5>
+                    <span class="md-caption">{{item.when}}</span>
+                </md-card-content>
+                <md-divider></md-divider>
+                <div class="md-actions" layout="row" layout-align="end center">
+                    <md-button ng-click="experience.gotoExperience($event, item)">More</md-button>
+                </div>
+            </md-card>
+    </section>
+</div>

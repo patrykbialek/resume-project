@@ -1,0 +1,40 @@
+<md-toolbar class="header md-whiteframe-z1 site-content-toolbar">
+    <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" hide-gt-sm aria-label="My bio" ng-click="main.toggleSidenav('left')">
+            <md-tooltip hide-sm>My bio</md-tooltip>
+            <md-icon class="material-icons md-light md-48">person</md-icon>
+        </md-button>
+        <h2 class="md-toolbar-item md-breadcrumb md-headline">
+            <span class="md-breadcrumb-page" hide-gt-sm1>{{currentState}}</span>
+        </h2>
+        <span flex=""></span>
+
+        <md-button class="md-icon-button" hide-sm aria-label="Resume in PDF"
+                   href={{main.resumeLink}} target="_blank">
+            <md-tooltip hide-sm>Resume in PDF</md-tooltip>
+            <md-icon class="material-icons">picture_as_pdf</md-icon>
+        </md-button>
+
+        <md-menu md-offset="0 -7">
+            <md-button class="md-icon-button" ng-click="main.openMenu($mdOpenMenu, $event)" aria-label="Open menu" >
+                <md-icon sclass="material-icons">menu</md-icon>
+            </md-button>
+            <md-menu-content width="3">
+                <md-menu-item class="main-menu" disabled="disabled" style="display:none;">
+                <md-button aria-label="empty" ><span></span></md-button>
+                </md-menu-item>
+                <md-menu-item class="main-menu" ng-repeat="state in main.navRoutes">
+                    <md-button ng-click="main.goToState(state.name)" ng-class="main.isCurrent(state)">
+                        <md-icon md-menu-align-target class="material-icons">{{state.settings.icon}}</md-icon>
+                        <span md-menu-align-target>{{state.title}}</span>
+                    </md-button>
+                </md-menu-item>
+            </md-menu-content>
+        </md-menu>
+
+        <md-button class="md-icon-button" ng-if="isAuth" ng-click="main.logout()" aria-label="Exit" >
+            <md-tooltip hide-sm md-autohide="true">Exit</md-tooltip>
+            <md-icon class="material-icons">power_settings_new</md-icon>
+        </md-button>
+    </div>
+</md-toolbar>

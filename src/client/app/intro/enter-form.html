@@ -1,0 +1,25 @@
+<md-dialog id="enterForm" aria-label="Enter" class="enter-dialog" data-ng-controller="Enter as enter">
+    <md-dialog-content data-ng-show="!enter.isBusy">
+        <form name="enterForm" data-ng-submit="enter.enter()" novalidate>
+            <md-toolbar class="error-message md-warn" data-ng-if="enter.errorMessage">{{enter.errorMessage}}</md-toolbar>
+            <md-input-container>
+                <label>Password</label>
+                <input type="password" ng-model="enter.user.password" autofocus required>
+            </md-input-container>
+            <section layout="row" layout-sm="row" layout-align="center center">
+                <md-input-container>
+                    <md-button type="button" class="md-button" data-ng-click="enter.cancel()">Cancel</md-button>
+                </md-input-container>
+                <md-input-container>
+                    <md-button type="submit" class="md-button md-raised md-primary" data-ng-disabled="enterForm.$invalid">Enter</md-button>
+                </md-input-container>
+            </section>
+        </form>
+    </md-dialog-content>
+
+    <md-dialog-content data-ng-show="enter.isBusy">
+        <div class="spinner" layout-padding layout="row" layout-align="center center" layout-wrap>
+            <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+        </div>
+    </md-dialog-content>
+</md-dialog>

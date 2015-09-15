@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <title>Patryk Bialek Resume-tests</title>
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <style>
+        body {
+            font: 20px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+            padding-left: 20px;
+            position: relative!important;
+        }
+    </style>
+
+    <!--BEWARE of using any app styles as @media can screw up tests -->
+
+    <link rel="stylesheet" href="node_modules/mocha/mocha.css">
+
+</head>
+
+<body>
+
+    <h1><a href="specs.html">Spec Runner</a></h1>
+    <p><strong>Make sure the REMOTE server is running</strong>
+        <br/> Click on a <em>description title</em> to narrow the scope to just its specs (see "<a href="http://mochajs.github.io/mocha/#grep-option"
+        target="_blank" title="MochaJS grep option">
+        ?grep</a>" in address bar).
+        <br/> Click on a <em>spec title</em> to see the test implementation.
+        <br/> Click on <em>page title</em> to start over.
+    </p>
+
+    <div id="mocha"></div>
+
+    <!-- inject:testlibraries:js -->
+    <script src="/node_modules/mocha/mocha.js"></script>
+    <script src="/node_modules/chai/chai.js"></script>
+    <script src="/node_modules/sinon-chai/lib/sinon-chai.js"></script>
+    <!-- endinject -->
+
+    <script>
+        expect = chai.expect;
+        AssertionError = chai.AssertionError;
+        mocha.setup('bdd');
+        mocha.traceIgnores = ['mocha.js', 'chai.js', 'angular.js'];
+    </script>
+
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="/bower_components/angular-aria/angular-aria.js"></script>
+    <script src="/bower_components/angular-material/angular-material.js"></script>
+    <script src="/bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="/bower_components/firebase/firebase.js"></script>
+    <script src="/bower_components/angularfire/dist/angularfire.js"></script>
+    <script src="/bower_components/extras.angular.plus/ngplus-overlay.js"></script>
+    <script src="/bower_components/moment/moment.js"></script>
+    <script src="/bower_components/toastr/toastr.js"></script>
+    <script src="/bower_components/angular-mocks/angular-mocks.js"></script>
+    <script src="/bower_components/bardjs/dist/bard.js"></script>
+    <script src="/bower_components/bardjs/dist/bard-ngRouteTester.js"></script>
+    <script src="/bower_components/sinon/index.js"></script>
+    <!-- endbower -->
+
+    <!-- inject:js -->
+    <script src="/src/client/app/app.module.js"></script>
+    <script src="/src/client/app/blocks/diagnostics/diagnostics.module.js"></script>
+    <script src="/src/client/app/blocks/exception/exception.module.js"></script>
+    <script src="/src/client/app/blocks/logger/logger.module.js"></script>
+    <script src="/src/client/app/blocks/router/router.module.js"></script>
+    <script src="/src/client/app/core/core.module.js"></script>
+    <script src="/src/client/app/intro/intro.module.js"></script>
+    <script src="/src/client/app/layout/layout.module.js"></script>
+    <script src="/src/client/app/sections/experience/experience.module.js"></script>
+    <script src="/src/client/app/sections/projects/projects.module.js"></script>
+    <script src="/src/client/app/sections/sections.module.js"></script>
+    <script src="/src/client/app/blocks/diagnostics/diagnostics.decorator.js"></script>
+    <script src="/src/client/app/blocks/exception/exception-handler.provider.js"></script>
+    <script src="/src/client/app/blocks/exception/exception.js"></script>
+    <script src="/src/client/app/blocks/logger/logger.js"></script>
+    <script src="/src/client/app/blocks/router/router-helper.provider.js"></script>
+    <script src="/src/client/app/core/authService.js"></script>
+    <script src="/src/client/app/core/common.js"></script>
+    <script src="/src/client/app/core/config.js"></script>
+    <script src="/src/client/app/core/constants.js"></script>
+    <script src="/src/client/app/core/core.route.js"></script>
+    <script src="/src/client/app/core/dataservice.js"></script>
+    <script src="/src/client/app/core/emailService.js"></script>
+    <script src="/src/client/app/intro/contact-form.controller.js"></script>
+    <script src="/src/client/app/intro/enter-form.controller.js"></script>
+    <script src="/src/client/app/intro/intro.controller.js"></script>
+    <script src="/src/client/app/intro/intro.route.js"></script>
+    <script src="/src/client/app/layout/footer.controller.js"></script>
+    <script src="/src/client/app/layout/main.controller.js"></script>
+    <script src="/src/client/app/layout/middlenav.controller.js"></script>
+    <script src="/src/client/app/layout/pb-bio.directive.js"></script>
+    <script src="/src/client/app/sections/education.directive.js"></script>
+    <script src="/src/client/app/sections/experience/experience.controller.js"></script>
+    <script src="/src/client/app/sections/experience/experience.route.js"></script>
+    <script src="/src/client/app/sections/faq.controller.js"></script>
+    <script src="/src/client/app/sections/other.controller.js"></script>
+    <script src="/src/client/app/sections/profile.controller.js"></script>
+    <script src="/src/client/app/sections/projects/projects.detail.controller.js"></script>
+    <script src="/src/client/app/sections/projects/projects.list.controller.js"></script>
+    <script src="/src/client/app/sections/projects/projects.route.js"></script>
+    <script src="/src/client/app/sections/sections.route.js"></script>
+    <!-- endinject -->
+
+    <!-- inject:spechelpers:js -->
+    <script src="/src/client/test-helpers/bind-polyfill.js"></script>
+    <script src="/src/client/test-helpers/mock-data.js"></script>
+    <!-- endinject -->
+
+    <!-- inject:specs:js -->
+    <script src="/src/client/app/blocks/exception/exception-handler.provider.spec.js"></script>
+    <script src="/src/client/app/core/core.route.spec.js"></script>
+    <script src="/src/client/app/core/dataservice.spec.js"></script>
+    <script src="/src/client/app/intro/contact-form.controller.spec.js"></script>
+    <script src="/src/client/app/intro/enter-form.controller.spec.js"></script>
+    <script src="/src/client/app/intro/intro.controller.spec.js"></script>
+    <script src="/src/client/app/intro/intro.route.spec.js"></script>
+    <script src="/src/client/app/layout/footer.controller.spec.js"></script>
+    <script src="/src/client/app/layout/main.controller.spec.js"></script>
+    <script src="/src/client/app/sections/experience/experience.controller.spec.js"></script>
+    <script src="/src/client/app/sections/experience/experience.route.spec.js"></script>
+    <script src="/src/client/app/sections/faq.controller.spec.js"></script>
+    <script src="/src/client/app/sections/other.controller.spec.js"></script>
+    <script src="/src/client/app/sections/profile.controller.spec.js"></script>
+    <script src="/src/client/app/sections/projects/projects.detail.controller.spec.js"></script>
+    <script src="/src/client/app/sections/projects/projects.list.controller.spec.js"></script>
+    <script src="/src/client/app/sections/projects/projects.route.spec.js"></script>
+    <script src="/src/client/app/sections/sections.route.spec.js"></script>
+    <!-- endinject -->
+
+    <!-- inject:templates:js -->
+    <script src="/.tmp/templates.js"></script>
+    <!-- endinject -->
+
+    <script>
+        //        mocha.checkLeaks();
+        //        mocha.globals(['___browserSync___oldSocketIo', 'io', '___browserSync___']);
+        bard.debugging(false);
+        var runner = mocha.run();
+        bard.mochaRunnerListener(runner);
+    </script>
+
+</body>
+
+</html>

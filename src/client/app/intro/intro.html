@@ -1,0 +1,41 @@
+<div class="intro">
+    <div layout="row" layout-sm="column" layout-margin layout-padding layout-align="center center">
+        <div class="intro-quotation text-center">
+            <p class="quotation-text" style="font-size: 1.9rem;">“Ignore people who say it can’t be done.”</p>
+            <i class="quotation-author"> ~ Elaine Rideout</i>
+        </div>
+    </div>
+
+    <section layout="row" layout-align-sm="center center" layout-sm="row" layout-wrap data-ng-show="!intro.isBusy">
+        <div flex-lg="35" flex-md="40" flex-sm="100" class="text-center" layout-padding offset-gt-sm="15" offset-md="5" offset-gt-lg="25"
+        layout-wrap data-ng-cloak>
+            <img src="images/profile.png" alt="">
+        </div>
+
+        <div class="intro-div" flex-gt-lg="30" flex-md="45" flex-gt-sm="40" flex-sm="100" class="text-justify" layout-padding data-ng-cloak
+        data-ng-show="intro.intro && !intro.isBusy" data-ng-bind-html="intro.intro">
+        </div>
+    </section>
+
+    <section layout="row" layout-align-sm="center center" layout-sm="row" layout-wrap>
+        <div class="spinner" layout-padding layout="row" layout-align="center center" layout-wrap data-ng-show="intro.isBusy">
+            <md-progress-circular class="md-hue-1" md-mode="indeterminate"></md-progress-circular>
+        </div>
+    </section>
+
+    <section layout="row" layout-align="center center" layout-sm="row" layout-wrap>
+        <md-button class="md-fab md-accent" aria-label="Contact me" data-ng-click="intro.gotoContactForm($event)" tabindex="-1">
+            <md-tooltip md-direction="top" hide-sm md-autohide="true">CONTACT ME</md-tooltip>
+            <md-icon class="material-icons">email</md-icon>
+        </md-button>
+        <md-button class="md-fab md-primary md-hue-3" aria-label="Enter" data-ng-click="intro.gotoEnterForm($event)" tabindex="-1">
+            <md-tooltip md-direction="top" hide-sm md-autohide="true">ENTER</md-tooltip>
+            <md-icon class="material-icons">exit_to_app</md-icon>
+        </md-button>
+        <!--<md-button class="md-fab md-warn" ng-click="intro.logout()">-->
+            <!--<md-icon class="material-icons">close</md-icon>-->
+        <!--</md-button>-->
+    </section>
+
+    <div id="successMessage" layout-align="center center"></div>
+</div>

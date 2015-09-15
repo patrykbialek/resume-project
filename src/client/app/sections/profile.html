@@ -1,0 +1,23 @@
+<div class="layout-content">
+
+    <div class="layout-quotation text-center">
+        <h3 class="quotation-text md-headline">“If you can dream it, you can do it.”</h3>
+        <i class="quotation-author md-caption"> ~ Walt Disney</i>
+    </div>
+    <md-divider></md-divider>
+
+    <section class="container md-whiteframe-z111">
+        <!--<md-toolbar class="md-primary">-->
+            <!--<div class="md-toolbar-tools">-->
+                <!--<h2 class="md-flex">{{profile.title}}</h2>-->
+            <!--</div>-->
+        <!--</md-toolbar>-->
+        <div class="md-padding" data-ng-show="!profile.isBusy" >
+            <p class="white-space-pre-line text-justify" ng-bind-html="profile.description"></p>
+        </div>
+        <span class="spinner" data-ng-show="profile.isBusy" layout-padding layout="row"
+                    layout-align="center center">
+            <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+        </span>
+    </section>
+</div>

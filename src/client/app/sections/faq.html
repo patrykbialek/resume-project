@@ -1,0 +1,33 @@
+<div class="layout-content">
+
+    <div class="layout-quotation text-center">
+        <h3 class="quotation-text md-headline">“I am only responsible for what I say, not what you understand.”</h3>
+        <i class="quotation-author md-caption"> ~ John Doe</i>
+    </div>
+    <md-divider></md-divider>
+
+    <section class="container question-list" layout="row" layout-margin layout-wrap layout-align="center center">
+
+        <span class="spinner" data-ng-show="faq.isBusy" layout-padding layout="row"
+            layout-align="center center">
+            <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+        </span>
+
+        <md-content class="question-search md-whiteframe-z1" flex="100" data-ng-show="!faq.isBusy">
+            <md-input-container md-no-float>
+                <md-icon class="material-icons">search</md-icon>
+                <input ng-model="faq.search" type="text" placeholder="quick search">
+            </md-input-container>
+        </md-content>
+
+        <md-card flex="100"
+                 data-ng-show="!faq.isBusy"
+                 ng-repeat="item in faq.questions | filter:faq.search">
+            <md-card-content>
+                <h3 class="md-headline">{{item.label}}</h3>
+                <h5 class="md-subhead">{{item.question}}</h5>
+                <span class="md-caption">{{item.answer}}</span>
+            </md-card-content>
+        </md-card>
+    </section>
+</div>

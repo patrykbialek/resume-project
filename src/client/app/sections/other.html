@@ -1,0 +1,50 @@
+<div class="layout-content">
+
+    <div class="layout-quotation text-center">
+        <h3 class="quotation-text md-headline">“A person who never made a mistake never tried anything new.”</h3>
+        <i class="quotation-author md-caption"> ~ Albert Einstein</i>
+    </div>
+    <md-divider></md-divider>
+
+    <section class="container">
+
+        <span class="spinner" data-ng-show="other.isBusy" layout-padding layout="row"
+                     layout-align="center center">
+            <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+        </span>
+
+        <div data-ng-show="!other.isBusy" layout="row" layout-margin layout-wrap layout-align="center center">
+            <pb-education class="education-list"></pb-education>
+
+            <md-card class="other-item" flex-gt-lg="45" flex="45" flex-md="80" flex-sm="100">
+                <md-card-content>
+                    <h3 class="md-headline">Skills</h3>
+                    <span class="md-caption">{{other.skills}}</span>
+                </md-card-content>
+            </md-card>
+
+            <md-card class="other-item" flex-gt-lg="45" flex="45" flex-md="80" flex-sm="100">
+                <md-card-content>
+                    <h3 class="md-headline">Trainings</h3>
+                    <span class="md-caption" ng-repeat="item in other.trainings">{{item}}; </span>
+                </md-card-content>
+            </md-card>
+
+            <md-card class="other-item" flex-gt-lg="45" flex="45" flex-md="80" flex-sm="100">
+                <md-card-content>
+                    <h3 class="md-headline">Foreign languages</h3>
+                    <span class="md-caption" ng-repeat="item in other.languages">{{item}};</span>
+                </md-card-content>
+            </md-card>
+
+            <md-card class="other-item" flex-gt-lg="45" flex="45" flex-md="80" flex-sm="100">
+                <md-card-content>
+                    <h3 class="md-headline">Interests</h3>
+                    <!--<h5 class="md-subhead">{{other.interests}}</h5>-->
+                    <span class="md-caption">{{other.interests}}</span>
+
+                </md-card-content>
+            </md-card>
+        </div>
+    </section>
+</div>
