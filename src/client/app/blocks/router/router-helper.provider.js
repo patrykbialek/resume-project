@@ -15,7 +15,7 @@
             resolveAlways: {}
         };
 
-        //It is off since github pages do not support is
+        //It should be off if page is hosted on github pages
         $locationProvider.html5Mode(true);
 
         this.configure = function(cfg) {
